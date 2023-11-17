@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-header);
+  padding: 1rem 0;
+  border-bottom: inset;
+}
+.logo {
+  height: 24px;
+  align-items: center;
+  white-space: nowrap;
+  margin-right: 0.5rem;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 24px;
+  margin: 0 10rem;
+}
+.container {
+  display: flex;
+  line-height: 34px;
+  gap: 2rem;
+}

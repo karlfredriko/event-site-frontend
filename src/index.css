@@ -1,41 +1,38 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --background: hsl(0, 0%, 100%);
+  --background-header: hsl(0, 0%, 98%);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --font-color: hsla(42, 65%, 10%, 1);
+  --font-color-light: hsl(41, 53%, 25%);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: var(--font-color);
 }
-
+#root {
+  width: 100%;
+}
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-weight: 600;
+  color: var(--font-color-light);
+  text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--font-color);
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+main {
+  display: flex;
+  justify-content: center;
+  min-height: 90%;
+  background: hsla(0, 0%, 0%, 0.2) url("/public/assets/mars-colony2.jpg");
+  background-size: cover;
 }
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -50,20 +47,9 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    background-color: var(--background);
   }
 }
