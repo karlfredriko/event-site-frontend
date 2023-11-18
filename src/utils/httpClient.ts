@@ -1,5 +1,5 @@
-// const BASE_SERVER = "http://localhost:8080/api/v1/";
-const BASE_SERVER = "http://192.168.1.202:8080/api/v1/";
+const BASE_SERVER = "http://localhost:8080/api/v1/";
+// const BASE_SERVER = "http://192.168.1.202:8080/api/v1/";
 
 export const getData = async <T>(endpoint: string) => {
   const res = await fetch(`${BASE_SERVER}${endpoint}`);

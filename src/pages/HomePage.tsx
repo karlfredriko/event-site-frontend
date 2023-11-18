@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { getData } from "../utils/httpClient";
 import { IBaseInfo } from "../models/IBaseInfo";
 import { IBaseInfoResponse } from "../utils/IBaseInfoResponse";
-import CTA from "../components/CTA";
+import MainInfo from "../components/MainInfo";
 
 const HomePage = () => {
   const [baseInfo, setBaseInfo] = useState<IBaseInfo>();
@@ -13,8 +13,8 @@ const HomePage = () => {
       try {
         const data = await getData<IBaseInfoResponse>("start");
         setBaseInfo(data.data);
-      } catch (error) {
-        console.log(error);
+      } catch (err) {
+        console.log(err);
       }
     };
     fetchBaseInfo();
@@ -22,7 +22,7 @@ const HomePage = () => {
 
   let content: ReactNode;
   if (baseInfo) {
-    content = <CTA data={baseInfo} />;
+    content = <MainInfo data={baseInfo} />;
   }
 
   return <>{content}</>;

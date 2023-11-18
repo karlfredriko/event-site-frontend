@@ -1,0 +1,27 @@
+.container {
+  background-color: var(--background-translucent);
+  place-self: center;
+  padding: 1rem;
+  border-radius: 8px;
+  line-height: 1.3rem;
+  border: outset;
+  display: flex;
+  gap: 1rem;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+.img {
+  height: 200px;
+  border-radius: 8px;
+}
+.name {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 16px;
+}
+.description {
+  line-height: 3rem;
+  font-style: italic;
+}

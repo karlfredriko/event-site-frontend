@@ -1,6 +1,7 @@
 :root {
   --background: hsl(0, 0%, 100%);
   --background-header: hsl(0, 0%, 98%);
+  --background-translucent: rgba(255, 255, 255, 0.6) 
 
   --font-color: hsla(42, 65%, 10%, 1);
   --font-color-light: hsl(41, 53%, 25%);
