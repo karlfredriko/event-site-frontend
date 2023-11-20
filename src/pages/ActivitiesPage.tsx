@@ -32,7 +32,7 @@ const ActivitiesPage = () => {
 
   return (
     <>
-      <div>{content}</div>
+      <div className="transparent-background">{content}</div>
     </>
   );
 };

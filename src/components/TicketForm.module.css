@@ -1,0 +1,28 @@
+.container {
+  background-color: var(--background-translucent);
+  place-self: center;
+  padding: 1rem;
+  border-radius: 8px;
+  letter-spacing: 4px;
+  line-height: 1.3rem;
+  border: outset;
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  margin: 1rem;
+  font-family: var(--font-family);
+  font-weight: 600;
+  letter-spacing: 4px;
+  border-radius: 8px;
+  border: outset;
+  padding: 0.6rem 1.2rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--font-color-translucent);
+}
+.button:active {
+  border: inset;
+}

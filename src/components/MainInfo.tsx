@@ -18,11 +18,11 @@ const MainInfo: FC<MainInfoProps> = ({ data }) => {
   return (
     <section className={s.container} onClick={handleNav}>
       <h1 className={s.name}>{name}&#8482;</h1>
-      <h2 className={s.slogan}>{slogan}</h2>
+      <h2 className={s.slogan}>{`- ${slogan}`}</h2>
+      <h2 className={s.text}>Biljetter tillgängliga nu!</h2>
+      <h2 className={s.location}>{`${location} - ${city}`}</h2>
       <h2 className={s.dateAndTime}>{`${date} - Lördag`}</h2>
       <h2 className={s.dateAndTime}>{`Dörrarna öppnar ${time}`}</h2>
-      <h2 className={s.location}>{`${location} - ${city}`}</h2>
-      <h2 className={s.text}>Köp dina biljetter nu!</h2>
     </section>
   );
 };

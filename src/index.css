@@ -1,12 +1,15 @@
 :root {
   --background: hsl(0, 0%, 100%);
   --background-header: hsl(0, 0%, 98%);
-  --background-translucent: rgba(255, 255, 255, 0.6) 
+  --background-translucent: rgba(255, 255, 255, 0.6);
+  --background-transparent: rgba(255, 255, 255, 0);
 
   --font-color: hsla(42, 65%, 10%, 1);
   --font-color-light: hsl(41, 53%, 25%);
 
-  font-family: "Montserrat", sans-serif;
+  --font-family: "Montserrat", sans-serif;
+
+  font-family: var(--font-family);
   color: var(--font-color);
 }
 #root {
@@ -20,7 +23,6 @@ a {
 a:hover {
   color: var(--font-color);
 }
-
 body {
   margin: 0 auto;
   display: flex;
@@ -30,25 +32,14 @@ body {
 main {
   display: flex;
   justify-content: center;
-  min-height: 90%;
+  min-height: 90vh;
   background: hsla(0, 0%, 0%, 0.2) url("/public/assets/mars-colony2.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.transparent-background {
+  background-color: var(--background-transparent);
 }
-button:hover {
-  border-color: #646cff;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     background-color: var(--background);
