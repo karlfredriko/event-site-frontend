@@ -23,6 +23,7 @@ const ActivitiesPage = () => {
   if (activities) {
     content = (
       <>
+        <br />
         {activities.map((activity) => (
           <ActivityPreCard key={activity.id} activity={activity} />
         ))}

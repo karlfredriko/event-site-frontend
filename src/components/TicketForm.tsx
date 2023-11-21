@@ -37,14 +37,22 @@ const ContactForm: FC<TicketFormProps> = ({ title }) => {
         <h2>{title}</h2>
         <label htmlFor="firstName">Förnamn</label>
         <input
-          required
           ref={firstName}
           type="text"
           name="firstName"
           id="firstName"
+          pattern="^[a-zåäöA-ZÅÄÖ]*$"
+          title="Endast bokstäver är giltiga"
         />
         <label htmlFor="lastName">Efternamn</label>
-        <input ref={lastName} type="text" name="lastName" id="lastName" />
+        <input
+          ref={lastName}
+          type="text"
+          name="lastName"
+          id="lastName"
+          pattern="^[a-zåäöA-ZÅÄÖ]*$"
+          title="Endast bokstäver är giltiga"
+        />
         <label htmlFor="email">E-Post</label>
         <input ref={email} type="email" name="email" id="email" />
         <label htmlFor="ticketType">Biljett</label>

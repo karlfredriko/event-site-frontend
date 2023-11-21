@@ -2,11 +2,18 @@
   background-color: var(--background-translucent);
   place-self: center;
   padding: 1rem;
-  margin: 2rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
   border-radius: 8px;
   border: outset;
   display: flex;
   gap: 1rem;
+}
+label {
+  font-weight: 600;
+}
+input:invalid {
+  border: red solid 3px;
 }
 .textContainer {
   display: flex;
@@ -15,11 +22,15 @@
 .img {
   height: 200px;
   border-radius: 8px;
+  @media (max-width: 992px) {
+    display: none;
+  }
 }
 .name {
   font-size: 40px;
   font-weight: 500;
   letter-spacing: 16px;
+  margin: 0;
 }
 .description {
   font-weight: 400;
