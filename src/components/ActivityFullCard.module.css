@@ -2,33 +2,39 @@
   background-color: var(--background-translucent);
   place-self: center;
   padding: 1rem;
-  margin-bottom: 2rem;
   max-width: 800px;
   border-radius: 8px;
   border: outset;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
   @media only screen and (max-width: 992px) {
     max-width: max-content;
-    margin: 0 10% 2rem 10%;
-    @media only screen and (max-width: 470px) {
-      margin: 0 3% 2rem 3%;
+    margin: 10% 10% 2rem 10%;
+    @media only screen and (max-width: 700px) {
+      margin: 10% 3% 2rem 3%;
     }
   }
 }
-.container:hover {
-  cursor: pointer;
+.rowContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  @media only screen and (max-width: 700px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 .textContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .img {
-  height: 200px;
+  height: 300px;
   border-radius: 8px;
-  @media only screen and (max-width: 992px) {
-    display: none;
+  @media only screen and (max-width: 700px) {
+    min-height: 300px;
   }
 }
 .name {
@@ -44,4 +50,9 @@
 .description {
   font-weight: 400;
   font-style: italic;
+}
+.text {
+  font-weight: 400;
+  font-style: italic;
+  margin: 0.5rem 0;
 }

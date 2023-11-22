@@ -6,5 +6,8 @@ export interface IActivity {
     src: string;
     alt: string;
   };
-  text: string;
+  text: {
+    blockOne: string;
+    blockTwo: string;
+  };
 }
