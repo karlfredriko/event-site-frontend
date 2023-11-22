@@ -35,30 +35,57 @@ const ContactForm: FC<TicketFormProps> = ({ title }) => {
     <>
       <form className={s.container} onSubmit={handleSubmit}>
         <h2>{title}</h2>
-        <label htmlFor="firstName">Förnamn</label>
+        <label className={s.label} htmlFor="firstName">
+          Förnamn
+        </label>
         <input
+          className={s.input}
           ref={firstName}
           type="text"
           name="firstName"
           id="firstName"
           pattern="^[a-zåäöA-ZÅÄÖ]*$"
           title="Endast bokstäver är giltiga"
+          required
         />
-        <label htmlFor="lastName">Efternamn</label>
+        <label className={s.label} htmlFor="lastName">
+          Efternamn
+        </label>
         <input
+          className={s.input}
           ref={lastName}
           type="text"
           name="lastName"
           id="lastName"
           pattern="^[a-zåäöA-ZÅÄÖ]*$"
           title="Endast bokstäver är giltiga"
+          required
         />
-        <label htmlFor="email">E-Post</label>
-        <input ref={email} type="email" name="email" id="email" />
-        <label htmlFor="ticketType">Biljett</label>
-        <select ref={ticketType} name="ticketType" id="ticketType">
-          <option value="standard">Standard</option>
-          <option value="premium">Premium</option>
+        <label className={s.label} htmlFor="email">
+          E-Post
+        </label>
+        <input
+          className={s.input}
+          ref={email}
+          type="email"
+          name="email"
+          id="email"
+        />
+        <label className={s.label} htmlFor="ticketType">
+          Biljett
+        </label>
+        <select
+          className={s.select}
+          ref={ticketType}
+          name="ticketType"
+          id="ticketType"
+        >
+          <option className={s.option} value="standard">
+            Standard
+          </option>
+          <option className={s.option} value="premium">
+            Premium
+          </option>
         </select>
         <button className={s.button}>Skicka</button>
       </form>

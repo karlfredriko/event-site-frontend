@@ -1,6 +1,7 @@
 .container {
   background-color: var(--background-translucent);
   place-self: center;
+  min-width: 300px;
   padding: 1rem;
   border-radius: 8px;
   letter-spacing: 4px;
@@ -8,6 +9,20 @@
   border: outset;
   display: flex;
   flex-direction: column;
+}
+.label {
+  font-weight: 600;
+}
+.select,
+.option {
+  font-family: inherit;
+  font-weight: 600;
+}
+.input,
+.select {
+  min-height: 1rem;
+  border-radius: 4px;
+  border: inset;
 }
 .button {
   margin: 1rem;

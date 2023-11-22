@@ -9,7 +9,6 @@ const ActivityDetailsPage = () => {
   const { id } = useParams();
   useEffect(() => {
     const fetchActivity = async () => {
-      console.log(id);
       const data = await getData<IActivityResponse>(`activities/${id}`);
       setActivity(data.data);
     };

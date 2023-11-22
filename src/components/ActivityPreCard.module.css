@@ -8,12 +8,16 @@
   border: outset;
   display: flex;
   gap: 1rem;
+  @media only screen and (max-width: 992px) {
+    max-width: max-content;
+    margin: 0 10% 2rem 10%;
+    @media only screen and (max-width: 470px) {
+      margin: 0 3% 2rem 3%;
+    }
+  }
 }
-label {
-  font-weight: 600;
-}
-input:invalid {
-  border: red solid 3px;
+.container:hover {
+  cursor: pointer;
 }
 .textContainer {
   display: flex;
@@ -22,7 +26,7 @@ input:invalid {
 .img {
   height: 200px;
   border-radius: 8px;
-  @media (max-width: 992px) {
+  @media only screen and (max-width: 992px) {
     display: none;
   }
 }
@@ -31,6 +35,10 @@ input:invalid {
   font-weight: 500;
   letter-spacing: 16px;
   margin: 0;
+  @media only screen and (max-width: 700px) {
+    font-size: 35px;
+    letter-spacing: 12px;
+  }
 }
 .description {
   font-weight: 400;

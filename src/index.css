@@ -32,8 +32,9 @@ body {
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
   min-height: 90vh;
-  background: hsla(0, 0%, 0%, 0.2) url("/public/assets/mars-colony2.jpg");
+  background: hsla(0, 0%, 0%, 0.2) url("/assets/mars-colony2.jpg");
   background-size: cover;
   background-attachment: fixed;
 }

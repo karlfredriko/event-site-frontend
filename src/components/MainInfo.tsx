@@ -21,8 +21,8 @@ const MainInfo: FC<MainInfoProps> = ({ data }) => {
       <h2 className={s.slogan}>{`- ${slogan}`}</h2>
       <h2 className={s.text}>Biljetter tillgängliga nu!</h2>
       <h2 className={s.location}>{`${location} - ${city}`}</h2>
-      <h2 className={s.dateAndTime}>{`${date} - Lördag`}</h2>
-      <h2 className={s.dateAndTime}>{`Dörrarna öppnar ${time}`}</h2>
+      <h2 className={s.date}>{`${date} - Lördag`}</h2>
+      <h2 className={s.time}>{`Dörrarna öppnar ${time}`}</h2>
     </section>
   );
 };
