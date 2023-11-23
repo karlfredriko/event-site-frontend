@@ -28,7 +28,7 @@ const ContactForm: FC<TicketFormProps> = ({ title }) => {
 
     postData<ITicketInfo, ITicketInfoResponse>("tickets", ticket);
     displayModalMsg(`Tack ${ticket.firstName} för ditt köp!`);
-    // e.currentTarget.reset();
+    e.currentTarget.reset();
   };
 
   return (

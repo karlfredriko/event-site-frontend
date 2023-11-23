@@ -44,13 +44,14 @@
     letter-spacing: 12px;
   }
 }
-.description {
-  font-size: 22px;
-  font-weight: 400;
-  font-style: italic;
-}
+.description,
 .text {
   font-weight: 400;
   font-style: italic;
+}
+.description {
+  font-size: 22px;
+}
+.text {
   margin: 0.5rem 0;
 }
