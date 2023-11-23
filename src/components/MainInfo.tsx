@@ -14,12 +14,15 @@ const MainInfo: FC<MainInfoProps> = ({ data }) => {
     navigate("/tickets");
   };
 
-  const { name, slogan, date, time, location, city } = data;
+  const { name, slogan, date, time, location, city, ticketsSold } = data;
   return (
     <section className={s.container} onClick={handleNav}>
       <h1 className={s.name}>{name}&#8482;</h1>
       <h2 className={s.slogan}>{`- ${slogan}`}</h2>
-      <h2 className={s.text}>Biljetter tillgängliga nu!</h2>
+      <h2 className={s.text}>
+        Biljetter tillgängliga nu!
+        <br /> Antal sålda biljetter {ticketsSold}
+      </h2>
       <h2 className={s.location}>{`${location} - ${city}`}</h2>
       <h2 className={s.date}>{`${date} - Lördag`}</h2>
       <h2 className={s.time}>{`Dörrarna öppnar ${time}`}</h2>

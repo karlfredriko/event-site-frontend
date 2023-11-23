@@ -4,7 +4,7 @@ import s from "./TicketForm.module.css";
 import { postData } from "../utils/httpClient";
 import { ITicketInfo } from "../models/ITicketInfo";
 import { ITicketInfoResponse } from "../utils/ITicketInfoResponse";
-import { capitalize } from "../utils/helper";
+import { capitalize, displayModalMsg } from "../utils/helper";
 
 type TicketFormProps = {
   title: string;
@@ -26,13 +26,16 @@ const ContactForm: FC<TicketFormProps> = ({ title }) => {
       ticketType: ticketType.current!.value,
     };
 
-    e.currentTarget.reset();
-    console.log(ticket);
     postData<ITicketInfo, ITicketInfoResponse>("tickets", ticket);
+    displayModalMsg(`Tack ${ticket.firstName} för ditt köp!`);
+    // e.currentTarget.reset();
   };
 
   return (
     <>
+      <aside id="modal" className="modal">
+        This is a Modal
+      </aside>
       <form className={s.container} onSubmit={handleSubmit}>
         <h2>{title}</h2>
         <label className={s.label} htmlFor="firstName">

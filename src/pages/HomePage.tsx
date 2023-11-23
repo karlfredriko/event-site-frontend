@@ -3,13 +3,14 @@ import { getData } from "../utils/httpClient";
 import { IBaseInfo } from "../models/IBaseInfo";
 import { IBaseInfoResponse } from "../utils/IBaseInfoResponse";
 import MainInfo from "../components/MainInfo";
+import { ITicketsSold } from "../models/ITicketsSold";
+import { ITicketsSoldResponse } from "../utils/ITicketsSoldResponse";
 
 const HomePage = () => {
   const [baseInfo, setBaseInfo] = useState<IBaseInfo>();
+  const [ticketsSold, setTicketsSold] = useState<ITicketsSold>();
   useEffect(() => {
     const fetchBaseInfo = async () => {
-      const data = await getData<IBaseInfoResponse>("start");
-      setBaseInfo(data.data);
       try {
         const data = await getData<IBaseInfoResponse>("start");
         setBaseInfo(data.data);
@@ -17,12 +18,21 @@ const HomePage = () => {
         console.log(err);
       }
     };
+    const fetchTicketsSold = async () => {
+      try {
+        const tickets = await getData<ITicketsSoldResponse>("tickets");
+        setTicketsSold(tickets.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
     fetchBaseInfo();
+    fetchTicketsSold();
   }, []);
 
   let content: ReactNode;
-  if (baseInfo) {
-    content = <MainInfo data={baseInfo} />;
+  if (baseInfo && ticketsSold) {
+    content = <MainInfo data={{ ...baseInfo, ...ticketsSold }} />;
   }
 
   return <>{content}</>;

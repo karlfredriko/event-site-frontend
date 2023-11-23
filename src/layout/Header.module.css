@@ -17,6 +17,7 @@
   width: 100%;
   font-size: 24px;
   margin: 0 10%;
+  letter-spacing: 1px;
   @media only screen and (max-width: 700px) {
     margin: 0 5%;
     flex-direction: column;
@@ -32,5 +33,6 @@
 .navContainer {
   @media only screen and (max-width: 700px) {
     margin-left: auto;
+    letter-spacing: 0;
   }
 }

@@ -34,6 +34,7 @@
 }
 .text {
   font-size: 30px;
+  line-height: 1.7rem;
   @media only screen and (max-width: 700px) {
     font-size: 20px;
   }

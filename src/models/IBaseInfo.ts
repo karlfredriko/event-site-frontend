@@ -5,4 +5,5 @@ export interface IBaseInfo {
   date: string;
   name: string;
   time: string;
+  ticketsSold?: number;
 }
