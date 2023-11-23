@@ -5,7 +5,6 @@
   margin-bottom: 2rem;
   max-width: 800px;
   border-radius: 8px;
-  border: outset;
   display: flex;
   gap: 1rem;
   @media only screen and (max-width: 992px) {

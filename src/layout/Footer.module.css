@@ -1,0 +1,11 @@
+.footer {
+  background-color: var(--background-footer);
+  padding: 1rem;
+}
+.copy {
+  text-align: end;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+}
